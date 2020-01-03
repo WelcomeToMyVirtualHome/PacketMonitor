@@ -20,7 +20,7 @@ if __name__ == '__main__':
     if not Path('./data').exists():
         Path('./data').mkdir()
 
-    TShark.run(['-i', 'wlo1', '-c', '1000', '-b', 'duration:5', '-w', 'data/out.pcapng'])    
+    TShark.run(['-i', 'wlo1', '-c', '100000', '-b', 'duration:5', '-w', 'data/out.pcapng'])    
 
     paths = [p.name for p in Path().glob('data/*.pcapng')]
     for p in paths:
