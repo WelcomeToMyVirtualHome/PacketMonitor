@@ -22,9 +22,6 @@ class PacketParser:
 
     @staticmethod
     def to_log(json_file, filename):
-        with open(json_file, 'r') as _file:
-            json_file = json.load(_file)
-
         with open(filename, "a+") as _file:
             for j in json_file:
                 _file.write(PacketParser.parse_json(j))
